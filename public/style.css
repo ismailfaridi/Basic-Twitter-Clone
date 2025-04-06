@@ -1,0 +1,43 @@
+h1 {
+  color: rgb(4, 121, 224);
+  text-align: center;
+}
+
+#h2-title {
+  text-align: center;
+}
+
+.tweet {
+  background-color: white;
+  border-radius: 1rem;
+  margin: 1rem 0.5rem;
+  padding: 0.5rem 1rem;
+  padding-bottom: 1.5rem;
+  box-shadow: 0 0 1rem rgb(212, 212, 212);
+}
+
+form {
+  display: inline;
+}
+
+button {
+  border: none;
+  background-color: rgb(4, 121, 224);
+  color: white;
+  padding: 0.4rem 0.7rem;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+#new-tweet-btn {
+  font-size: 15px;
+  padding: 1rem 1.7rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

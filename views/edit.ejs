@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= tweet.title %></title>
+    <link rel="stylesheet" href="/style.css">
+    </style>
+</head>
+<body>
+    <h1>Twitter</h1>
+
+    <div class="tweet">
+        <form method="POST" action="http://localhost:3000/<%= tweet.id %>?_method=PATCH">
+            <label for="title">Title:</label><br/>
+            <input type="text" id="title" name="title" value="<%= tweet.title %>" required>
+            <br/><br/>
+    
+            <label for="content">Tweet:</label><br/>
+            <textarea name="content" id="content" rows="10" cols="35" required><%= tweet.content %></textarea>
+            <br/>
+    
+            <button>Update Tweet</button>
+        </form>
+    </div>
+</body>
+</html>

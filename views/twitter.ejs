@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <h1>Twitter</h1>
+    <p style="text-align: center;">Made by <a href="https://ismailfaridi.com/">Muhammad Ismail</a></p>
+    <h2 id="h2-title">Tweets of the day!</h2>
+
+    <% for(tweet of tweets) { %>
+        <div class="tweet">
+            <h3><%= tweet.title %></h3>
+            <h4>@<%= tweet.username %></h4>
+            <p><%= tweet.content %></p>
+
+            <a href="http://localhost:3000/<%= tweet.id %>"><button>Show more</button></a>
+            <a href="http://localhost:3000/<%= tweet.id %>/edit"><button>Edit</button></a>
+            <form method="POST" action="/<%= tweet.id %>?_method=DELETE"><button>Delete</button></form>
+        </div>
+    <% } %>
+
+    <a href="http://localhost:3000/new">
+        <button id="new-tweet-btn"><i class="fa-solid fa-pen"></i></button>
+    </a>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter - New Tweet</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .tweet {
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Twitter</h1>
+
+    <div class="tweet">
+        <form method="POST" action="http://localhost:3000/">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Your username" name="username" required>
+            <br/><br/>
+            
+            <label for="title">Title:</label>
+            <input type="text" id="title" placeholder="Enter Title" name="title" required>
+            <br/><br/>
+            
+            <label for="content">Your Tweet:</label><br/>
+            <textarea id="content" rows="10" cols="35" name="content" required></textarea>
+            <br/>
+
+            <button>Publish</button>
+        </form>
+    </div>
+</body>
+</html>
